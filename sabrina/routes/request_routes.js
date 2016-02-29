@@ -7,7 +7,7 @@ const jwtAuth = require(__dirname + '/../lib/jwt-auth');
 
 var requestsRouter = module.exports = exports = express.Router();
 
-requestsRouter.get('/requestsAll', (req, res) => {
+requestsRouter.get('/requests', (req, res) => {
   Request.find({}, (err, data) => {
     if (err) return handleDBError(err, res);
     res.status(200).json(data);
