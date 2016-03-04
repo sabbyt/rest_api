@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 app.use('/api', donorsRouter);
 app.use('/api', requestsRouter);
 app.use(authRouter);
-app.use('/api', userRouter);
+app.use(userRouter);
 
 var PORT = process.env.PORT || 3000;
 var server = module.exports = exports = app.listen(PORT, () => console.log('Server started on port: ' + PORT));
